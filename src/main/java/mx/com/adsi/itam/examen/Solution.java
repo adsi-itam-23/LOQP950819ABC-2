@@ -1,5 +1,6 @@
 package mx.com.adsi.itam.segundaparte;
-import java.util.logging.Logger;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 /**
  * Clase utilizada para el segundo parcial de ADSI @ITAM
  * @author Pablo López Quiles
@@ -11,6 +12,10 @@ public class Solution {
      *
      * @param s String para comparar
      */
+    /* el approach fue iterar sobre cada subcadena y ver cuantas veces 
+    * aparecia en la cadena original, utilizando las longitudes se descartaron subcaenas que no se deberian
+    * checar debido a que formarian  strings mas grandes, es decir, solo se toman divisores de la longitud original
+    */
     public boolean problema(String s){
         //approach iterar sobre todas las subcadenas
         int tamOriginal = s.length();
@@ -24,7 +29,7 @@ public class Solution {
                 continue;
             }
             //creamos el substring que queremos checar
-            subC= s.substring(0,tamSubC));
+            subC= s.substring(0,tamSubC);
             int contador = 0;
             //checamos cuantas veces existe en la cadena grande 
             //utilizando el susbtring como un Pattern de Java

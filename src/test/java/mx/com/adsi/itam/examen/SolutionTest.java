@@ -27,11 +27,14 @@ public class SolucionTest
         return new TestSuite( AppTest.class );
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+    
+    @Test
+    public void testSolucion() {
+        Solution tester = new Solution(); // MyClass is tested
+
+        // assert statements
+        assertTrue(tester.probblema("abab"));
+        assertTrue(tester.probblema("bbb"));
+        assertFalse(tester.probblema("acbab"));   
+     }
 }
